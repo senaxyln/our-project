@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start - Business Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS */
+    h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    }
+
+    p, a, li, input, button, label {
+    font-family: 'Raleway', sans-serif;
+    }
+    .header {
+      background-color: #77C5A7; /* Same as in the image */
+      color: white;
+      padding: 80px 0;
+    }
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .header p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .header .btn {
+      margin-top: 20px;
+      background-color: white;
+      color: black;
+      font-weight: 600;
+      padding: 10px 30px;
+    }
+    .header .btn:hover {
+      background-color: #E8F7F4;
+    }
+    .header-img {
+      max-width: 100%;
+      height: auto;
+    }
+    .navbar-custom {
+      background-color: #77C5A7; /* Same as in the image */
+    }
+    .navbar-brand img {
+      height: 30px; /* Adjust this value as needed */
+    }
+    .navbar-nav .nav-link {
+      color: white;
+      font-weight: 500;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #E8F7F4; /* Slight hover effect */
+    }
+    .navbar, .navbar-nav .nav-link {
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 400;
+    }
+
+    .btn-custom {
+      background-color: #6C63FF;
+      color: white;
+    }
+    .btn-custom:hover {
+      background-color: #5547DB;
+    }
+    .features-section, .our-talents-section {
+      padding: 60px 0;
+    }
+
+    .footer {
+      background-color: #77C5A7;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .social-links a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+    color: #ddd;
+    }
+
+    .team-card img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+ 
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Logo">
+            Start
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <p class="text-uppercase">Welcome</p>
+          <h1>Lorem ipsum dolor sit amet consectetur</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum, voluptate culpa nesciunt delectus iste?</p>
+          <a href="#" class="btn">Explore</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="images/Frame 7.png" alt="Illustration" class="header-img">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Partners Section -->
+  <section class="partners-section text-center py-5">
+    <div class="container">
+      <h2>Partners</h2>
+      <div class="row my-4">
+        <div class="col">
+          <img src="images/Google.png" alt="Google">
+        </div>
+        <div class="col">
+          <img src="images/Microsoft.png" alt="Microsoft">
+        </div>
+        <div class="col">
+          <img src="images/airbnb.png" alt="Airbnb">
+        </div>
+        <div class="col">
+          <img src="images/facebook.png" alt="Facebook">
+        </div>
+        <div class="col">
+          <img src="images/Spotify.png" alt="Spotify">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h3>Lorem Ipsum Dolor</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sit, reiciendis accusamus, sapiente quod!</p>
+          <a href="#" class="btn btn-dark">Learn More</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="images/Frame 15.png" class="img-fluid" alt="Feature Image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Second Feature Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <h3>Lorem Ipsum Dolor</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sit, reiciendis accusamus, sapiente quod!</p>
+          <a href="#" class="btn btn-dark">Learn More</a>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <img src="images/Frame 14.png" class="img-fluid" alt="Feature Image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Talents Section -->
+  <section class="our-talents-section text-center">
+    <div class="container">
+      <h3>Our Talents</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, id.</p>
+      <div class="row justify-content-center">
+        <div class="col-md-3">
+          <div class="card team-card p-3">
+            <img src="images/Frame 26.png" class="card-img-top" alt="Team Member">
+            <div class="card-body">
+              <h5 class="card-title">Peg Legge</h5>
+              <p class="card-text">CEO</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card team-card p-3">
+            <img src="images/Frame 28.png" class="card-img-top" alt="Team Member">
+            <div class="card-body">
+              <h5 class="card-title">Richard Guerra</h5>
+              <p class="card-text">CTO</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card team-card p-3">
+            <img src="images/Frame 27.png" class="card-img-top" alt="Team Member">
+            <div class="card-body">
+              <h5 class="card-title">Alessandra Silva</h5>
+              <p class="card-text">COO</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card team-card p-3">
+            <img src="images/Frame 29.png" class="card-img-top" alt="Team Member">
+            <div class="card-body">
+              <h5 class="card-title">Janet Bray</h5>
+              <p class="card-text">Marketing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn btn-dark mt-4">View Team</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <p>&copy; Start, 2024 - All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+          <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </footer>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
