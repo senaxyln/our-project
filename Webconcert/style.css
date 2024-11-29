@@ -1,0 +1,233 @@
+/* Remove underline from links */
+a {
+    text-decoration: none;
+}
+
+/* Navbar header background */
+.head, .head2 {
+    background-color: rgb(107, 29, 180); /* Consistent background */
+}
+
+/* Logo and text alignment */
+.head2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo + text and toggler */
+}
+
+/* Adjust the logo position and size */
+.head2 img {
+    margin-right: 10px; /* Space between logo and text */
+    height: 40px; /* Adjust logo height */
+}
+
+/* Brand styling */
+.navbar-brand {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0; /* Remove any margins around the brand */
+}
+
+/* Navbar links */
+.navbar-nav a {
+    color: white;
+    margin-left: 15px; /* Add space between nav items */
+}
+
+/* Toggler button */
+.navbar-toggler {
+    margin-left: auto; /* Keep the toggler on the far right */
+}
+
+/* hero section */ 
+#home {
+-webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+mask-image: linear-gradient(rgba(0, 0, 0, 1) 89%, rgba(0, 0, 0, 0)); 
+}
+
+.c1 img{
+  filter: brightness(0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-item img {
+  display: block;
+  width: 100%;
+  height: 95vh;
+  object-fit: cover;
+}
+ .carousel-caption{
+  padding-bottom: 40px;
+ }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .carousel {
+      width: 100%;
+    }
+    .carousel-item img {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel {
+      width: 100%;
+    }
+    .carousel-item img {
+      height: 200px;
+    }
+  }
+
+/* isi section */
+#isi{
+    background-color: white;
+}
+.isi-title{
+    display: flex;
+    justify-content: flex-start;
+}
+.isi-title h2{
+    font-size: 37px;
+    color:black;
+    padding-bottom: 12px;
+}
+.card{
+    width: 18rem;
+    color: white;
+    background-color: rgb(159, 43, 226);
+}
+.card h5{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+.card-body{
+    padding: 5px;
+}
+.card img{
+    height: 180px;
+    width: 100%;
+}
+.card-title{
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.btn{
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* news section */
+.news-title{
+    color: black;
+    padding-top: 20px;
+}
+.col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 1024px){
+    .yt{
+        height: 220px;
+        width: 392px;
+    }
+}
+@media (max-width: 768px){
+    .yt{
+        height: 157px;
+        width: 280px;
+    }
+}
+/* @media(max-width: 425px){
+    iframe{
+        height: 95px;
+        width: 168px;
+    }
+} */
+.ply h1{
+  padding-top: 20px;
+}
+
+/* endpost section */
+#endpost{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(https://img.freepik.com/free-photo/rear-view-excited-people-with-arms-raised-having-fun-while-watching-confetti-fireworks-front-stage-music-festival-copy-space_637285-568.jpg?t=st=1727019673~exp=1727023273~hmac=3cf7dee2e4ad3920908a59b8f4963566f7b3cd2717026459bb290946199c09f5&w=1480) center;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 11%);
+}
+.buton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer */
+.footer {
+    background: linear-gradient(0deg, rgba(107, 29, 180, 1) 70%, rgba(107, 29, 180, 0) 100%), 
+                linear-gradient(135deg, rgb(107, 29, 180), rgb(164, 80, 227));
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 100px; /* Adjust the logo size here */
+    height: auto;
+}
+
+.footer-info {
+    flex: 1;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ddd;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-info, .social-links, .footer-logo {
+        margin-bottom: 10px;
+    }
+}
