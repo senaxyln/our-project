@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+    <STYLE>
+        a{
+        color:orange;
+        font-size:20px;
+        }
+        th{
+        color: orange;
+        font-size:30px;}
+        tr{
+        color:orange;
+        font-size:20px;
+        }
+        </STYLE>
+        <SCRIPT type="text/javascript" src="jquery-1.8.3.js"></SCRIPT>
+        <SCRIPT type="text/javascript">
+        $(document).ready(function(){
+        $("#coolMenu").hide();
+        $("#prooffers").hide();
+        $("#bank").mouseenter (function(){
+        $("#coolMenu").show(500);
+        });
+        $("#bank").mouseleave (function(){
+        $("#coolMenu").hide(500);
+        });
+        $("#pro").mouseenter (function(){
+        $("#prooffers").show(500); 
+        });
+        $("#pro").mouseleave (function(){
+        $("#prooffers").hide(500);
+        });
+        });
+        </SCRIPT>
+</HEAD>
+<BODY>
+<A ID="bank" href="">Bank Offers</A>
+<A ID="pro" href="">Lucky Draw</A>
+<DIV ID="coolMenu" style=" width: 500px; height: 400px; padding-top: 0px; border: 4px solid orange; background-color:black;">
+<TABLE>
+<TR>
+<TH><B>Bank Offers</B></TH>
+</TR>
+<TR><TD>Use ACA Bank Credit Card and Avail Buy 1 Get 1 Free Offer</TD></TR>
+<TR><TD>Use ACE Bank Debit Card and Get 5% Off on Tickets</TD></TR>
+<TR><TD>Use FHDC Bank Credit Card and Get 10% Off on Tickets</TD></TR>
+<TR><TD>Use AQ Bank Credit Card and Avail Buy 2 Get 1 Free Offer</TD></TR>
+</TABLE>
+</DIV>
+<DIV ID="prooffers" style=" width: 500px; height: 400px; padding-top: 0px; 
+align:right;border: 4px solid orange; background-color:black;">
+<TABLE>
+<TR>
+<TH><B>Lucky Draw</B></TH>
+</TR>
+<TR><TD>Book Tickets Online And Get a Chance to Grab Dinner Vouchers at
+Aura</TD></TR>
+<TR><TD>Register on our Website Now and Get a Chance to Grab Free
+Tickets</TD></TR>
+<TR><TD>Avail 20% Discounts on tickets at Marcus Cinemas</TD></TR>
+</TABLE>
+</DIV>
+</BODY>
+</HTML>

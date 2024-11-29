@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, userscalable=no">
+
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Web Title -->
+    <title>ONE Ticket</title>
+
+    <!-- Stylesheet -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Web icon -->
+     <link rel="shortcut icon" href="Assets/web icon.jpg">
+</head>
+
+<body>    
+    <!-- navbar -->
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#00000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Venue.html">Venue</a></li>
+            <li><a href="Category.html">Category</a></li>
+            <li><a href="Artists.html">Artists</a></li>
+            <li><a href="BookingDetails.html">Ticket</a></li>
+            <li><a href="SigIn.html">Login</a></li>
+        </ul>
+        <ul>
+            <li><a class="logo" href="index.html">ONE Ticket</a></li>
+            <li class="hideOnMobile"><a href="Venue.html">Venue</a></li>
+            <li class="hideOnMobile"><a href="Category.html">Category</a></li>
+            <li class="hideOnMobile"><a href="Artists.html">Artists</a></li>
+            <li class="hideOnMobile"><a href="BookingDetails.html">Ticket</a></li>
+            <li class="hideOnMobile"><a href="SigIn.html">Login</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function showSidebar(){
+            const sidebar= document.querySelector('.sidebar')
+            sidebar.style.display='flex'
+        }
+        function hideSidebar(){
+            const sidebar= document.querySelector('.sidebar')
+            sidebar.style.display='none'
+        }
+    </script>
+
+<!-- Caraousel -->
+    <section>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <a href="aNiki.html">
+                    <img src="Assets/Niki.2.jpg" alt="">
+                    <div class="item-text">
+                        <h2>NIKI</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="a1975.html">
+                    <img src="Assets/1975.jpg" alt="">
+                    <div class="item-text">
+                        <h2>The 1975</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="aAriana.html">
+                    <img src="Assets/Ariana.jpg" alt="">
+                    <div class="item-text">
+                        <h2>Ariana Grande</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="aKendrik.html">
+                    <img src="Assets//Kendrick.jpg" alt="">
+                    <div class="item-text">
+                        <h2>Kendrick Lamar</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="aJustin.html">
+                    <img src="Assets/Justin.jpg" alt="">
+                    <div class="item-text">
+                        <h2>Justin Bieber</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        $(document).ready(function(){
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                loop: true,
+                center: true,
+                margin: 15,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 2500,
+                stagePadding: 50,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1.5
+                    },
+                    760:{
+                        items: 2
+                    },
+                    1000: {
+                        items: 3 
+                    },
+                    1400: {
+                        items: 3
+                    },
+                    2560:{
+                        items: 5
+                    }
+                }
+            });
+        });
+    </script>
+
+
+
+    
+    <!-- Poster -->
+    <section id="poster">
+
+        <!-- poster heading -->
+        <div class="poster-heading">
+            <h3>Celebrity Fact</h3>
+        </div>
+
+    <!-- Poster container -->
+        <div class="poster-container">
+
+            <!-- poster 1 -->
+            <div class="poster-box">
+
+                <!-- img -->
+                <div class="poster-img">
+                    <img src="Assets/Niki.2.jpg" alt="Niki photo">
+                </div>
+
+                <!-- text -->
+                <div class="poster-text">
+                    <span>Nicole Zevanya</span>
+                    <a href="#" class="poster-title">RnB Singer</a>
+                    <p>Let's get to know about NIKI </p>
+                    <a href="aNiki.html">Read more</a>
+                </div>
+
+            </div>
+
+             <!-- poster 2 -->
+            <div class="poster-box">
+
+                <!-- img -->
+                <div class="poster-img">
+                    <img src="Assets/Bryson.jpg" alt="Bryson photo">
+                </div>
+
+                <!-- text -->
+                <div class="poster-text">
+                    <span>Bryson Tiller</span>
+                    <a href="#" class="poster-title">Find out?</a>
+                    <p>Let's get to know about Bryson</p>
+                    <a href="aBryson.html">Read more</a>
+                </div>
+
+            </div>
+
+             <!-- poster 3 -->
+            <div class="poster-box">
+
+                <!-- img -->
+                <div class="poster-img">
+                    <img src="Assets/Nirvana.jpg" alt="Nirvana photo">
+                </div>
+
+                <!-- text -->
+                <div class="poster-text">
+                    <span>Nirvana</span>
+                    <a href="#" class="poster-title">The legend of rock grunge</a>
+                    <p>Let's get to know about Nirvana</p>
+                    <a href="aNirvana.html">Read more</a>
+                </div>
+
+            </div>
+            
+             <!-- poster 4 -->
+            <div class="poster-box">
+
+                <!-- img -->
+                <div class="poster-img">
+                    <img src="Assets/Ariana.jpg" alt="Ariana photo">
+                </div>
+
+                <!-- text -->
+                <div class="poster-text">
+                    <span>Ariana Grande</span>
+                    <a href="#" class="poster-title">Queen of Pop</a>
+                    <p>Let's get to know about Ari</p>
+                    <a href="aAriana.html">Read more</a>
+                </div>
+
+            </div>
+
+             <!-- poster 5 -->
+            <div class="poster-box">
+
+                <!-- img -->
+                <div class="poster-img">
+                    <img src="Assets/Kendrick.jpg" alt="Kendrick photo">
+                </div>
+
+                <!-- text -->
+                <div class="poster-text">
+                    <span>Kendrick Lamar</span>
+                    <a href="#" class="poster-title">Rapper</a>
+                    <p>Let's get to know about Kendrick</p>
+                    <a href="aKendrik.html">Read more</a>
+                </div>
+
+            </div>
+
+             <!-- poster 6 -->
+            <div class="poster-box">
+
+                <!-- img -->
+                <div class="poster-img">
+                    <img src="Assets/Rihanna.jpg" alt="Rihanna photo">
+                </div>
+
+                <!-- text -->
+                <div class="poster-text">
+                    <span>Rihanna</span>
+                    <a href="#" class="poster-title">Why is Rihanna hiatus?</a>
+                    <p>Let's get to know about Rihanna</p>
+                    <a href="aRihanna.html">Read more</a>
+                </div>
+            </div>          
+        </div>
+    </section>
+
+    <section>
+        <div class="footer-container">
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for any inquiries or feedback.</p>
+            </div>
+            <div class="footer-contact2">
+                <ul>
+                <li>+62 812 3456 7890</li>
+                <li><a href="mailto:info@oneticket.com">info@oneticket.com</a></li>
+                <li>Jl. Sudirman No. 12, Jakarta 10220</li>
+            </ul>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+        <p>Copyright 2023 ONE Ticket. All rights reserved.</p>
+      </footer>
+</body>
+</html>

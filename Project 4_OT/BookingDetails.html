@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="BookingDetails.css">
+    <link rel="shortcut icon" href="Assets/web icon.jpg">
+    <title>ONE Ticket</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#00000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Venue.html">Venue</a></li>
+            <li><a href="Category.html">Category</a></li>
+            <li><a href="Artists.html">Artists</a></li>
+            <li><a href="BookingDetails.html">Ticket</a></li>
+            <li><a href="SigIn.html">Login</a></li>
+        </ul>
+        <ul>
+            <li><a class="logo" href="index.html">ONE Ticket</a></li>
+            <li class="hideOnMobile"><a href="Venue.html">Venue</a></li>
+            <li class="hideOnMobile"><a href="Category.html">Category</a></li>
+            <li class="hideOnMobile"><a href="Artists.html">Artists</a></li>
+            <li class="hideOnMobile"><a href="BookingDetails.html">Ticket</a></li>
+            <li class="hideOnMobile"><a href="SigIn.html">Login</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function showSidebar(){
+            const sidebar= document.querySelector('.sidebar')
+            sidebar.style.display='flex'
+        }
+        function hideSidebar(){
+            const sidebar= document.querySelector('.sidebar')
+            sidebar.style.display='none'
+        }
+    </script>
+
+    <script src="BookingDetails.js"></script>
+
+    <!-- Form -->
+    <div class="container">
+        <h2>Booking Details</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="telepon">Nomor Telepon:</label>
+                <input type="text" id="telepon" name="telepon" required oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="ktp">Nomor KTP:</label>
+                <input type="text" id="ktp" name="ktp" required oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.slice(0, 16);">
+            </div>
+            <div class="form-group">
+                <label for="ticket-type">Jenis Tiket:</label>
+                <select id="ticket-type" name="ticket-type" required>
+                    <option value="">Select Ticket Type</option>
+                    <option value="Diamond">Diamond</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="Gold">Gold</option>
+                    <option value="Silver">Silver</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="artist">Artis yang Dipilih:</label>
+                <select id="artist" name="artist" required>
+                    <option value="">Select Artist</option>
+                    <option value="Ariana Grande">Ariana Grande</option>
+                    <option value="Justin Bieber">Justin Bieber</option>
+                    <option value="The 1975">The 1975</option>
+                    <option value="Bryson Tiller">Bryson Tiller</option>
+                    <option value="Frank Sinatra">Frank Sinatra</option>
+                    <option value="GreenDay">GreenDay</option>
+                    <option value="Kendrick Lamar">Kendrick Lamar</option>
+                    <option value="The Neighbourhood">The Neighbourhood</option>
+                    <option value="NIKI">NIKI</option>
+                    <option value="Nirvana">Nirvana</option>
+                    <option value="Rihanna">Rihanna</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="concert-date">Tanggal Konser:</label>
+                <input type="text" id="concert-date" name="concert-date" readonly>
+            </div>
+            <div class="form-group">
+                <label for="concert-venue">Tempat Konser:</label>
+                <input type="text" id="concert-venue" name="concert-venue" readonly>
+            </div>
+            <div class="form-group">
+                <label for="num-tickets">Jumlah Tiket:</label>
+                <input type="number" id="num-tickets" name="num-tickets" min="1" value="1" required>
+            </div>
+            <div class="form-group">
+                <label for="ticket-price">Harga Tiket:</label>
+                <select id="ticket-price" name="ticket-price" required disabled>
+                    <!-- options will be populated dynamically based on ticket-type selection -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="total-price">Total Harga:</label>
+                <input type="text" id="total-price" name="total-price" readonly>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="receipt" id="receipt" style="display: none;">
+        <h2>Receipt</h2>
+        <table>
+            <tr>
+                <td><strong>Order Date:</strong></td>
+                <td id="receipt-order-date"></td>
+              </tr>
+            <tr>
+                <td><strong>Nama Lengkap:</strong></td>
+                <td id="receipt-nama"></td>
+            </tr>
+            <tr>
+                <td><strong>Nomor Telepon:</strong></td>
+                <td id="receipt-telepon"></td>
+            </tr>
+            <tr>
+                <td><strong>Email:</strong></td>
+                <td id="receipt-email"></td>
+            </tr>
+            <tr>
+                <td><strong>Nomor KTP:</strong></td>
+                <td id="receipt-ktp"></td>
+            </tr>
+            <tr>
+                <td><strong>Jenis Tiket:</strong></td>
+                <td id="receipt-ticket-type"></td>
+            </tr>
+            <tr>
+                <td><strong>Venue yang Dipilih:</strong></td>
+                <td id="receipt-venue"></td>
+            </tr>
+            <tr>
+                <td><strong>Artis yang Dipilih:</strong></td>
+                <td id="receipt-artist"></td>
+            </tr>
+            <tr>
+                <td><strong>Harga Tiket:</strong></td>
+                <td id="receipt-ticket-price"></td>
+            </tr>
+            <tr>
+                <td><strong>Jumlah Tiket:</strong></td>
+                <td id="receipt-num-tickets"></td>
+            </tr>
+            <tr>
+                <td><strong>Total Harga:</strong></td>
+                <td id="receipt-total-price"></td>
+            </tr>
+        </table>
+    </div>
+    
+    <footer>
+        <p>All rights reserved ™ & Copyright © </p>
+    </footer>
+
+    <script src="BookingDetails.js"></script>
+</body>
+</html>

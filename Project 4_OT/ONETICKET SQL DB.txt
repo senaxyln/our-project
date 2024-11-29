@@ -1,0 +1,89 @@
+CREATE DATABSE oneticket_db
+
+
+CREATE TABLE user_data (
+  userID VARCHAR(100) NOT NULL PRIMARY KEY,
+  nama VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  Tanggal_lahir DATE,
+  gender CHAR(10),
+  password VARCHAR(100) NOT NULL
+);
+
+
+// To view data from user_data table
+SELECT * FROM user_data LIMIT 100;
+
+DELIMITER //
+
+CREATE TRIGGER before_insert_user_data
+BEFORE INSERT ON user_data
+FOR EACH ROW
+BEGIN
+    DECLARE new_id VARCHAR(100);
+    SET new_id = CONCAT('UID', LPAD((SELECT IFNULL(MAX(SUBSTRING(userID, 4) + 1), 1) FROM user_data), 3, '0'));
+    SET NEW.userID = new_id;
+END //
+
+DELIMITER ;
+
+
+-------------------------------------------------------------------------------------------------------
+
+//Atmin
+
+CREATE TABLE atmin_data (
+  atminID VARCHAR(100) NOT NULL PRIMARY KEY,
+  nama VARCHAR(100) NOT NULL,
+  password VARCHAR(100) NOT NULL
+);
+
+INSERT INTO atmin_data (atminID, nama, password) VALUES
+('ATM001', 'Fathon', '2325'),
+('ATM002', 'Mutia', '12345'),
+('ATM003', 'Salwa', '67890');
+
+-------------------------------------------------------------------------------------------------------
+
+CREATE TABLE ticket_data (
+    ticketID VARCHAR(255) PRIMARY KEY NOT NULL,
+    artis VARCHAR(255) NOT NULL UNIQUE,
+    tgl_konser DATE NOT NULL,
+    tmpt_konser VARCHAR(255) NOT NULL,
+    var_tiket CHAR(10) NOT NULL,
+    harga DECIMAL(10, 2) NOT NULL
+);
+
+DELIMITER //
+
+CREATE TRIGGER before_insert_user_data
+BEFORE INSERT ON user_data
+FOR EACH ROW
+BEGIN
+    DECLARE new_id VARCHAR(100);
+    SET new_id = CONCAT('UID', LPAD((SELECT IFNULL(MAX(SUBSTRING(userID, 4) + 1), 1) FROM user_data), 3, '0'));
+    SET NEW.userID = new_id;
+END //
+
+DELIMITER ;
+
+----------------------------------------------------------------------------------------------------------
+
+CREATE TABLE bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(255),
+    telepon VARCHAR(20),
+    email VARCHAR(255),
+    ktp VARCHAR(16),
+    ticket_type VARCHAR(50),
+    artist VARCHAR(100),
+    concert_date DATE,
+    concert_venue VARCHAR(255),
+    num_tickets INT,
+    ticket_price DECIMAL(10, 2),
+    total_price DECIMAL(10, 2),
+    kode_booking VARCHAR(50),
+    nomor_va VARCHAR(50),
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);

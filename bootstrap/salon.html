@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: lightgray;
+            padding-top: 20px;
+            font-family: 'Comic Neue', sans-serif;
+        }
+        .navbar {
+            padding: 10px 20px;
+            background-color: white;
+            border-bottom: 2px solid lightgray;
+        }
+        .navbar-brand-custom {
+        font-family: 'Lobster', cursive;
+        }
+        .section {
+            padding: 40px 0;
+        }
+        .home-container, .about-container, .gallery-container {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .about-container .col-md-4 {
+            margin-bottom: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-item {
+            padding: 0 15px;
+        }
+        @media (max-width: 768px) {
+            .gallery-item {
+                padding: 0 5px;
+            }
+        }
+        .card {
+            width: 18rem;
+            margin: 20px auto; /* Center the card horizontally */
+            text-align: center; /* Center the text within the card */
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 15px; /* Adjust margin for spacing */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar with Subheading -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <p class="navbar-brand navbar-brand-custom" style="color: pink;">Salon Beauty</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="salon.html">Home</a>
+              <a class="nav-link" href="facilities.html">Facilities</a>
+              <a class="nav-link" href="#">Price</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container">
+        <!-- Home Section -->
+        <div class="row section home-container">
+            <div class="col-md-8 p-4" style="background-color: lightblue;">
+                <h2 class="section-title">Welcome to Salon Beauty</h2>
+                <p>Experience the finest beauty and hair care services in town. Our skilled professionals are dedicated to providing personalized treatments to meet your unique needs.</p>
+            </div>
+            <div class="col-md-4 p-4" style="background-color: lightcoral;">
+                <img src="images/salon.jpg" alt="Salon Image" class="img-fluid rounded">
+            </div>
+        </div>
+
+        <!-- About Us Section -->
+        <div class="row section about-container">
+            <div class="col-md-8 p-4" style="background-color: lightgreen;">
+                <h2 class="section-title">About Us</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4" style="background-color: lightpink; padding: 20px;">
+                        <h3>Our Story</h3>
+                        <p>Founded in 2020, Salon Beauty has been dedicated to providing the highest quality beauty and hair care services.</p>
+                    </div>
+                    <div class="col-md-4 mb-4" style="background-color: lightyellow; padding: 20px;">
+                        <h3>Our Mission</h3>
+                        <p>We strive to make every client feel special and beautiful, offering personalized treatments in a warm, welcoming environment.</p>
+                    </div>
+                    <div class="col-md-4 mb-4" style="background-color: lightcyan; padding: 20px;">
+                        <h3>Our Vision</h3>
+                        <p>To be the leading salon in the community, known for innovation, creativity, and exceptional customer service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="row section gallery-container">
+            <div class="col-md-12">
+                <h2 class="section-title">Gallery</h2>
+                <div class="row">
+                    <div class="col-md-4 gallery-item">
+                        <img src="images/haircut.jpg" alt="Gallery Image 1" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-4 gallery-item">
+                        <img src="images/manicure.jpg" alt="Gallery Image 2" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-4 gallery-item">
+                        <img src="images/facial.jpg" alt="Gallery Image 3" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
