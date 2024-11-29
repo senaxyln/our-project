@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Custom CSS */
+    .navbar-custom {
+      background-color: #77C5A7; /* Same as in the image */
+    }
+    .navbar-brand img {
+      height: 30px; /* Adjust this value as needed */
+    }
+    .navbar-nav .nav-link {
+      color: white;
+      font-weight: 500;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #E8F7F4; /* Slight hover effect */
+    }
+    .contact-section {
+      padding: 80px 0;
+    }
+    .contact-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .contact-section p {
+      font-size: 1.1rem;
+      color: #777;
+      margin-bottom: 40px;
+    }
+    .form-control {
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+
+    .form-group {
+  margin-bottom: 15px;
+}
+
+.form-check-inline {
+  margin-right: 10px;
+}
+
+.form-check-label {
+  margin-left: 5px;
+}
+
+    .btn-submit {
+      background-color: #333;
+      color: white;
+      font-weight: 600;
+      padding: 10px 20px;
+    }
+    .btn-submit:hover {
+      background-color: #555;
+    }
+    .contact-map {
+      width: 100%;
+      height: auto;
+    }
+
+    .footer {
+      background-color: #77C5A7;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .social-links a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+    color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+     <!-- Navbar Section -->
+     <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Logo">
+            Start
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+  <!-- Contact Us Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="row">
+        <!-- Contact Form -->
+        <div class="col-lg-6">
+          <h2>Contact Us</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          <form>
+            <!-- Nama -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+
+            <!-- Pesan -->
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+            </div>
+
+            <!-- Jenis Kelamin (Radio Button) -->
+            <div class="form-group">
+                <label>Jenis Kelamin</label><br>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                <label class="form-check-label" for="male">Laki-laki</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                <label class="form-check-label" for="female">Perempuan</label>
+                </div>
+            </div>
+
+            <!-- Tanggal Lahir -->
+            <div class="form-group">
+                <label for="dob">Tanggal Lahir</label>
+                <input type="date" class="form-control" id="dob">
+            </div>
+
+            <!-- Mengetahui Iklan Ini Dari Mana (Checkbox) -->
+            <div class="form-group">
+                <label>Mengetahui iklan ini dari mana?</label><br>
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="socialMedia" value="socialMedia">
+                <label class="form-check-label" for="socialMedia">Media Sosial</label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="friends" value="friends">
+                <label class="form-check-label" for="friends">Teman</label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="ads" value="ads">
+                <label class="form-check-label" for="ads">Iklan</label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="other" value="other">
+                <label class="form-check-label" for="other">Lainnya</label>
+                </div>
+            </div>
+
+            <!-- Tombol Submit -->
+            <button type="submit" class="btn btn-submit">Submit</button>
+          </form>
+        </div>
+
+        <!-- Map Image -->
+        <div class="col-lg-6">
+          <img src="images/Frame 53.png" alt="Map" class="contact-map">
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; Start, 2024 - All rights reserved.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+          </div>
+        </footer>
+      </div>
+    </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
