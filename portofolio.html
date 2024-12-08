@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Start</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+
+      /* Custom CSS */
+      body, h1, h2, h3, h4, h5, h6, p, a, li, input, button, label {
+      font-weight: 400;
+    }
+
+   /* Navbar Styles */
+.navbar-custom {
+    background-color: #77C5A7; /* Same as in the image */
+}
+
+.navbar-brand img {
+    height: 30px; /* Adjust this value as needed */
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #E8F7F4; /* Slight hover effect */
+}
+
+    .portfolio-section {
+      padding: 60px 0;
+    }
+
+    .portfolio-card img {
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .portfolio-card:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .portfolio-card h5 {
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    .portfolio-card p {
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    .footer-logo {
+      height: 40px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+   <!-- Navbar Section -->
+   <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Logo">
+        Start
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Our Portfolio</h2>
+        <p class="text-muted">Check out some of our amazing projects and designs.</p>
+      </div>
+      <div class="row g-4">
+        <!-- Portfolio Item 1 -->
+        <div class="col-md-4">
+          <div class="card portfolio-card">
+            <img src="images/project1.jpg" class="card-img-top" alt="Project 1">
+            <div class="card-body text-center">
+              <h5 class="card-title">Project Title 1</h5>
+              <p class="card-text">Web Development</p>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Item 2 -->
+        <div class="col-md-4">
+          <div class="card portfolio-card">
+            <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
+            <div class="card-body text-center">
+              <h5 class="card-title">Project Title 2</h5>
+              <p class="card-text">Graphic Design</p>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Item 3 -->
+        <div class="col-md-4">
+          <div class="card portfolio-card">
+            <img src="images/project3.jpg" class="card-img-top" alt="Project 3">
+            <div class="card-body text-center">
+              <h5 class="card-title">Project Title 3</h5>
+              <p class="card-text">Digital Marketing</p>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Item 4 -->
+        <div class="col-md-4">
+          <div class="card portfolio-card">
+            <img src="images/project4.jpg" class="card-img-top" alt="Project 4">
+            <div class="card-body text-center">
+              <h5 class="card-title">Project Title 4</h5>
+              <p class="card-text">Mobile App</p>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Item 5 -->
+        <div class="col-md-4">
+          <div class="card portfolio-card">
+            <img src="images/project5.jpg" class="card-img-top" alt="Project 5">
+            <div class="card-body text-center">
+              <h5 class="card-title">Project Title 5</h5>
+              <p class="card-text">Branding</p>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-4">
+          <div class="card portfolio-card">
+            <img src="images/project6.jpg" class="card-img-top" alt="Project 6">
+            <div class="card-body text-center">
+              <h5 class="card-title">Project Title 6</h5>
+              <p class="card-text">SEO Optimization</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light py-4 text-center">
+    <div class="container">
+      <img src="images/logo.png" alt="Logo" class="footer-logo">
+      <p class="mb-1">&copy; Start, 2024 - All rights reserved.</p>
+      <p class="text-muted">Follow us on social media</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
